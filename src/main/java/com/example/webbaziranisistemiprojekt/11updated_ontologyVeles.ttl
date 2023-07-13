@@ -1,0 +1,1281 @@
+@prefix ns: <http://www.semanticweb.org/visitNorthMacedonia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/visitNorthMacedonia> a owl:Ontology .
+
+ns:Apartmani_Centar_Kumanovo a ns:Accommodation ;
+    rdfs:label "Apartmani Centar Kumanovo"^^xsd:string ;
+    ns:Description "Apartment"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/211592436.jpg?k=6f695826a5aa60079b6c44059442a026d85fcd13d3b337cf114124447df66d39&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Apartment_Staša a ns:Accommodation ;
+    rdfs:label "Apartment Staša"^^xsd:string ;
+    ns:Description "Apartment"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/309289305.jpg?k=c6f478af0c600983dd40dfb9377e302bac993176947c909f2f693feda973e000&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Atlas_City_Center_Hotel a ns:Accommodation ;
+    rdfs:label "Atlas City Center Hotel"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max500/84212876.jpg?k=5a66469dbb13186f86ed28cd81e107196bb75e72d341c8f14287224d057ab4a7&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Bela_Voda a ns:Accommodation ;
+    rdfs:label "Bela Voda"^^xsd:string ;
+    ns:Description "Child-friendly"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/167085383.jpg?k=140a3f25a476c827706b249a9754e38f8f7c7f52f1e23adb313c3bdf38d4abdd&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Berovo a ns:City ;
+    rdfs:label "Berovo"^^xsd:string ;
+    ns:Description "Berovo is a small town near the Maleševo Mountains, 161 km from Skopje, 47 km from Strumica and 52 km from Kočani, in North Macedonia. It is the seat of Berovo Municipality."^^xsd:string .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Blue_Lake_Hostel/Apartments> a ns:Accommodation ;
+    rdfs:label "Blue Lake Hostel/Apartments"^^xsd:string ;
+    ns:Description "Kitchen · Service · Property"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298044652.jpg?k=7a1568ffaf8b87baa42f4f7321dad3554220df5194eedb9503f5b1ddcf1bc692&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Chola_Guest_House a ns:Accommodation ;
+    rdfs:label "Chola Guest House"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/5895569.jpg?k=3114947be76b668f0fa7b860b33a438cfcdb569759f305d18e68f97154f1266c&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:City_Break_Bitola a ns:Accommodation ;
+    rdfs:label "City Break Bitola"^^xsd:string ;
+    ns:Description "3 bedrooms"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/155604618.jpg?k=d33ca8f0af22d5dabe2f540b60013c9b4dfb622105c96040e8f2e854b68bb89a&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Comfort_Hotel a ns:Accommodation ;
+    rdfs:label "Comfort Hotel"^^xsd:string ;
+    ns:Description "Pool"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/351675045.jpg?k=28aa680fe3c1d8d83123364f5391d4ae994cb756067d0b8d345fa00e50c7ab66&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Debar a ns:City ;
+    rdfs:label "Debar"^^xsd:string ;
+    ns:Description "Debar is a city in the western part of North Macedonia, near the border with Albania, off the road from Struga to Gostivar. It is the seat of Debar Municipality. Debar has an ethnic Albanian majority of 74% and is North Macedonia's only city in which ethnic Macedonians do not rank first or second demographically."^^xsd:string .
+
+ns:Delchevo a ns:City ;
+    rdfs:label "Delchevo"^^xsd:string ;
+    ns:Description "Delčevo is a small town in the eastern mountainous part of North Macedonia. It is the municipal seat of the eponymous municipality. A festival in celebration of revolutionary leader Goce Delčev is held every year on August 2nd."^^xsd:string .
+
+ns:Demir_Kapija a ns:City ;
+    rdfs:label "Demir Kapija"^^xsd:string ;
+    ns:Description "Demir Kapija is a small town in North Macedonia, located near the ominous limestone gates of the same name. It has 3,725 inhabitants. The town is the seat of Demir Kapija Municipality."^^xsd:string .
+
+ns:Description a owl:DatatypeProperty ;
+    rdfs:domain ns:Accommodation,
+        ns:Attraction,
+        ns:City ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+ns:DoubleTree_by_Hilton_Skopje a ns:Accommodation ;
+    rdfs:label "DoubleTree by Hilton Skopje"^^xsd:string ;
+    ns:Description "Relaxed hotel with dining & a pool"^^xsd:string ;
+    ns:Image "https://www.hilton.com/im/en/SKPABDI/10434349/outside-1.jpg?impolicy=crop&cw=5000&ch=2669&gravity=NorthWest&xposition=0&yposition=71&rw=768&rh=410"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Easy_Apartments_Kumanovo a ns:Accommodation ;
+    rdfs:label "Easy Apartments Kumanovo"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/472234495.jpg?k=1372177bec6a7e79cd70a4c27e495d182e2956cd5197f4926f6a6c086482f4ca&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.1"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Ema_Apartments_Bitola_Macedonia_\(FYROM\) a ns:Accommodation ;
+    rdfs:label "Ema Apartments Bitola Macedonia (FYROM)"^^xsd:string ;
+    ns:Description "3 bedrooms"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/204986644.jpg?k=063423904a9f618b6e9492f56df93c10f668f06aa46d809896deb47e41efc020&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Esperanto a ns:Accommodation ;
+    rdfs:label "Esperanto"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://scontent.fskp2-1.fna.fbcdn.net/v/t39.30808-6/300858809_510570571071368_5009520895142827940_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=Ok_YNNDdhfoAX_wtbYD&_nc_ht=scontent.fskp2-1.fna&oh=00_AfBDYm7XBySuQG8D1ZDc9ygCh_TdYI3hpZ9FNNyQiW4BXQ&oe=64AECF6F"^^xsd:string ;
+    ns:Rating "3.9"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Gardenia_Hotel_&_Spa> a ns:Accommodation ;
+    rdfs:label "Gardenia Hotel & Spa"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://scontent.fskp2-1.fna.fbcdn.net/v/t39.30808-6/327273493_1000133450945292_9039700864008572777_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=uNznQhOkSJYAX9OkIO2&_nc_ht=scontent.fskp2-1.fna&oh=00_AfDIHEhGlP2Sqd7DVJSL6jdGL3PrU5WwUcLwUeFBIo8rmQ&oe=64B0192B"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Gevgelija a ns:City ;
+    rdfs:label "Gevgelija"^^xsd:string ;
+    ns:Description "Gevgelija is a town with a population of 15,685 located in the very southeast of the North Macedonia along the banks of the Vardar River, situated at the country's main border with Greece, the point ..."^^xsd:string .
+
+ns:Gligorov a ns:Accommodation ;
+    rdfs:label "Gligorov"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/f2/12/21/getlstd-property-photo.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "3.9"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Goldy_Hostel a ns:Accommodation ;
+    rdfs:label "Goldy Hostel"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/216846479.jpg?k=e0b1dfbb1e85859c44ea8f21efa913d1e79da74f7c1ee3aff02ec371bd73c68b&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Gostivar a ns:City ;
+    rdfs:label "Gostivar"^^xsd:string ;
+    ns:Description "Gostivar, is a city in North Macedonia, located in the upper Polog valley region. It is one of the largest municipalities in the country with a population of 81,042, and the town also covers 1.341 square kilometres."^^xsd:string .
+
+ns:Guest_House_Antika_Prilep a ns:Accommodation ;
+    rdfs:label "Guest House Antika Prilep"^^xsd:string ;
+    ns:Description "Sleeps 10"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/213900684.jpg?k=561599122095a90a77eaf186cca005acd36cfe510f091c36888e97bde5f3b0fc&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:HOTEL_ROMA a ns:Accommodation ;
+    rdfs:label "HOTEL ROMA"^^xsd:string ;
+    ns:Description "Child-friendly"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/368316663.jpg?k=78d82dbb3cfa436cd40e89a3b3cdd95c2f94d582f3f2c176ea4d5c61004b41b1&o=&hp=1"^^xsd:string ;
+    ns:Rating "5.0"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Holiday_Inn_Skopje a ns:Accommodation ;
+    rdfs:label "Holiday Inn Skopje"^^xsd:string ;
+    ns:Description "Casual hotel with dining & free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/246993043.jpg?k=861c5fbca74f7918e3cab412bcc0d1f9b6bb807b44d5fb38bd3b2103afe7c3ad&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hostel_&_Apartments_Academy> a ns:Accommodation ;
+    rdfs:label "Hostel & Apartments Academy"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/280910842.jpg?k=0e27eabdd64865af4d93f4c213f44e78dc9d8aa2b514daab97987a0ef33269c5&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Hostel_NAMA a ns:Accommodation ;
+    rdfs:label "Hostel NAMA"^^xsd:string ;
+    ns:Description "Child-friendly"^^xsd:string ;
+    ns:Image "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/203602962.jpg?k=665b5880e9f79dbdf95f3c04f67bd106eb5a961dc6aa63bd6d2d491f8835833d&o="^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hostel_„City“> a ns:Accommodation ;
+    rdfs:label "Hostel „City“"^^xsd:string ;
+    ns:Description "Humble hostel with a kitchen & a terrace"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/97/4f/5e/hotel-city-park.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "3.9"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_&_Spa_„Solun“> a ns:Accommodation ;
+    rdfs:label "Hotel & Spa „Solun“"^^xsd:string ;
+    ns:Description "Refined hotel with a restaurant & a spa"^^xsd:string ;
+    ns:Image "https://www.hotelsolun.com/image.jpg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_&_spa_Glorius> a ns:Accommodation ;
+    rdfs:label "Hotel & spa Glorius"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://glorius.mk/wp-content/uploads/2022/10/IMG_20210802_174954.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Hotel_Aleksandar_Palace a ns:Accommodation ;
+    rdfs:label "Hotel Aleksandar Palace"^^xsd:string ;
+    ns:Description "Relaxed hotel with dining & a pool"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/51965290.jpg?k=cc26a6cb8c969718595a99cf3a2eea152d26c238a18224866446a8cd9477a356&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Hotel_Alexandar_II a ns:Accommodation ;
+    rdfs:label "Hotel Alexandar II"^^xsd:string ;
+    ns:Description "Upscale quarters with city views"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/3b/4c/b7/hotel-alexandar-ii.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Hotel_Arka a ns:Accommodation ;
+    rdfs:label "Hotel Arka"^^xsd:string ;
+    ns:Description "Modern hotel with a rooftop bar & a pool"^^xsd:string ;
+    ns:Image "https://www.panacomp.net/wp-content/uploads/2021/05/featured-Hotel_Arka_gallery-24.jpg"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Hotel_Bella_Donna a ns:Accommodation ;
+    rdfs:label "Hotel Bella Donna"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/105866021.jpg?k=172e4335744de285bb3d26ab8b06cd6e93d93387f160a31a54c3cd9895285504&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Hotel_City_Park a ns:Accommodation ;
+    rdfs:label "Hotel City Park"^^xsd:string ;
+    ns:Description "Unfussy lodging with free breakfast"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/97/4f/5e/hotel-city-park.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Hotel_De_KOKA a ns:Accommodation ;
+    rdfs:label "Hotel De KOKA"^^xsd:string ;
+    ns:Description "Casual Old Bazaar hotel with city views"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c2/f5/99/hotel-de-koka-building.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Hotel_Dion a ns:Accommodation ;
+    rdfs:label "Hotel Dion"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://hotel-dion-prilep.booked.net/data/Photos/OriginalPhoto/5267/526795/526795539/Hotel-Dion-Prilep-Exterior.JPEG"^^xsd:string ;
+    ns:Rating "3.0"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Hotel_Epinal a ns:Accommodation ;
+    rdfs:label "Hotel Epinal"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://images.trvl-media.com/lodging/39000000/39000000/38991700/38991635/a51c9bce.jpg?impolicy=resizecrop&rw=500&ra=fit"^^xsd:string ;
+    ns:Rating "4.1"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Hotel_Focus a ns:Accommodation ;
+    rdfs:label "Hotel Focus"^^xsd:string ;
+    ns:Description "Free parking"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/420694660.jpg?k=e7c7ec2701de60031c085f011f1ae945c9f2d015d348534afe56edb2534f4d91&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Hotel_Harmony a ns:Accommodation ;
+    rdfs:label "Hotel Harmony"^^xsd:string ;
+    ns:Description "Parking"^^xsd:string ;
+    ns:Image "https://www.kayak.com/rimg/himg/5a/3e/82/expediav2-720215-37e608-421761.jpg?width=1366&height=768&crop=true"^^xsd:string ;
+    ns:Rating "4.1"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Hotel_Ilinden a ns:Accommodation ;
+    rdfs:label "Hotel Ilinden"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/35140182.jpg?k=3665bf8b928826619b7d15c3c311fb79f2cb381ae5df85135c7bd1ee2c1646ba&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Hotel_Kristal_Palas a ns:Accommodation ;
+    rdfs:label "Hotel Kristal Palas"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/179845134.jpg?k=553d1d2182cd8920ddb9f64644309b8a1a63da36eeef0ba6d5fce5ad4bbeab3a&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Hotel_Kumanovo_Spa a ns:Accommodation ;
+    rdfs:label "Hotel Kumanovo Spa"^^xsd:string ;
+    ns:Description "Breakfast "^^xsd:string ;
+    ns:Image "https://www.kumanovospa.mk/wp-content/uploads/2021/06/IMG_4506-scaled.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Hotel_Mimoza a ns:Accommodation ;
+    rdfs:label "Hotel Mimoza"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/85/85/48/getlstd-property-photo.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Hotel_Mirage a ns:Accommodation ;
+    rdfs:label "Hotel Mirage"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/54113495.jpg?k=03f890859605cf7057e0ce6c476fcc686b28b91932caef10980bd94f08a878e7&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Hotel_Montenegro a ns:Accommodation ;
+    rdfs:label "Hotel Montenegro"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/118629334.jpg?k=94ba2d52eb7f68c7071d89539900c7ef77bfbee15f8a7364c9ff9fbaf8e57298&o="^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_Panoramika_Design_&_Spa> a ns:Accommodation ;
+    rdfs:label "Hotel Panoramika Design & Spa"^^xsd:string ;
+    ns:Description "Upscale hotel with a restaurant & a spa"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/142762157.jpg?k=1262807342ac63cc391951798d17bce5d9ed694c073936bd0a32be4c42d2bbfa&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Hotel_Park_Lakeside a ns:Accommodation ;
+    rdfs:label "Hotel Park Lakeside"^^xsd:string ;
+    ns:Description "Nature · Pool"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/54551142.jpg?k=b7acfe2b6b5ec0968ebd903a4a7d6f45d372b69d0a8d373f1468e8466c7f4142&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Hotel_Restoran_Antika a ns:Accommodation ;
+    rdfs:label "Hotel Restoran Antika"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/87981096.jpg?k=9723901e39981746a52cf9d7ba15a87d315135ba67bcc863d373cd0d2c848a8d&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Hotel_Romantik a ns:Accommodation ;
+    rdfs:label "Hotel Romantik"^^xsd:string ;
+    ns:Description "Pool"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/207376512.jpg?k=4db7af94459b6c187a9a68d0577bc2d9d31b05b27f8624e32012ae6f9ed0a000&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Hotel_Salida_2 a ns:Accommodation ;
+    rdfs:label "Hotel Salida 2"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/370306102.jpg?k=b989d664855bede3fb2e9d4bc97feb6330079772affc814bf6d1063be5228439&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_Sirius_Spa_&_Wellness> a ns:Accommodation ;
+    rdfs:label "Hotel Sirius Spa & Wellness"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "http://hotel-sirius.com.mk/Storage/5DS_0746.jpg"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Hotel_Sonce a ns:Accommodation ;
+    rdfs:label "Hotel Sonce"^^xsd:string ;
+    ns:Description "Pool"^^xsd:string ;
+    ns:Image "https://hotel-sonce-prilep.booked.net/data/Photos/OriginalPhoto/206/20666/20666412/Hotel-Sonce-Prilep-Exterior.JPEG"^^xsd:string ;
+    ns:Rating "4.1"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Hotel_Square a ns:Accommodation ;
+    rdfs:label "Hotel Square"^^xsd:string ;
+    ns:Description "Stylish hotel on a bustling city square"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/24/76/49/hotel-square.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_Tino_&_Spa> a ns:Accommodation ;
+    rdfs:label "Hotel Tino & Spa"^^xsd:string ;
+    ns:Description "Food · Nightlife · Wellness"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264598164.jpg?k=eb2b2276bc7849c54ae44edc2c2ac7f3f2f84ac64922a4868e264e6beb68ac39&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Hotel_Tino_Sveti_Stefan a ns:Accommodation ;
+    rdfs:label "Hotel Tino Sveti Stefan"^^xsd:string ;
+    ns:Description "Wellness · Spa · Fitness"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/339207677.jpg?k=c78bdb1464dbb81dd94b4d7758cff4ab19f11c908e288dd05e016141e146ad4e&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Hotel_Viktorija a ns:Accommodation ;
+    rdfs:label "Hotel Viktorija"^^xsd:string ;
+    ns:Description "Child-friendly"^^xsd:string ;
+    ns:Image "https://viktorija-rooms-bitola.booked.net/data/Photos/OriginalPhoto/11444/1144480/1144480344/Viktorija-Rooms-Bitola-Exterior.JPEG"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Hotel_Villa_Palace a ns:Accommodation ;
+    rdfs:label "Hotel Villa Palace"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://scontent.fskp2-1.fna.fbcdn.net/v/t1.6435-9/66285127_1973477109425727_5959657771950407680_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Z0B3U9fRn24AX8-Wg8s&_nc_ht=scontent.fskp2-1.fna&oh=00_AfAO-mooXAIcRC10cH7OzZ3bN75YsXCOIV0acsveL0X_Tg&oe=64D131C0"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_„Ambasador“> a ns:Accommodation ;
+    rdfs:label "Hotel „Ambasador“"^^xsd:string ;
+    ns:Description "Relaxed hotel with a restaurant & a bar"^^xsd:string ;
+    ns:Image "https://www.panacomp.net/wp-content/uploads/2016/05/featured-78686140.jpg"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_„Best_Western“> a ns:Accommodation ;
+    rdfs:label "Hotel „Best Western“"^^xsd:string ;
+    ns:Description "Modest hotel with dining & a bar"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/41052414.jpg?k=4709fb116cf11e30d17a1a31ee352b4b1e4d1d166c59668250ab74cb5136da89&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Hotel_„Leonardo“> a ns:Accommodation ;
+    rdfs:label "Hotel „Leonardo“"^^xsd:string ;
+    ns:Description "Casual hotel with free breakfast buffet"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/268415447.jpg?k=cf7d369e1eb9baa4d9c32df936295a38fc2b910143bd56bfd75dd850d035fbfc&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Image a owl:DatatypeProperty ;
+    rdfs:domain ns:Accommodation,
+        ns:Attraction,
+        ns:City ;
+    rdfs:range xsd:string .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Imperial_Hotel_&_Spa> a ns:Accommodation ;
+    rdfs:label "Imperial Hotel & Spa"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://scontent.fskp2-1.fna.fbcdn.net/v/t1.6435-9/80385977_155505032458945_1922485910683779072_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_ohc=JtZcmQyscJ0AX9NsXQf&_nc_ht=scontent.fskp2-1.fna&oh=00_AfCgBiV8guLoeglwURSKfvTdIEuir5bPqFmJ-dTsP262dA&oe=64D13548"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:International_Palace a ns:Accommodation ;
+    rdfs:label "International Palace"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/404607760.jpg?k=19b08aaab223f152ea2189fbd9281b319f70474edf990f47d3d1e96a35979098&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Izgrev_Sunrise a ns:Accommodation ;
+    rdfs:label "Izgrev Sunrise"^^xsd:string ;
+    ns:Description "Pool"^^xsd:string ;
+    ns:Image "https://www.hotelizgrev.com/images/uploads/11-2021/landing-hero-02_1637412461.jpg"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+<http://www.semanticweb.org/visitNorthMacedonia#KOKINO_Winery_&_Hotel> a ns:Accommodation ;
+    rdfs:label "KOKINO Winery & Hotel"^^xsd:string ;
+    ns:Description "Breakfast "^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/451259036.jpg?k=da06ff40cd42402acffe9dda0d7e735509ce31ec6dce9e97894fe6933e4bac26&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:KUBI_Hotel a ns:Accommodation ;
+    rdfs:label "KUBI Hotel"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/178357953.jpg?k=f8d85c369ac7e44f5fd9b1f3244eb6781b1efec5753a2f6c1dc030bdf3da6d12&o="^^xsd:string ;
+    ns:Rating "3.7"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Kavadarci a ns:City ;
+    rdfs:label "Kavadarci"^^xsd:string ;
+    ns:Description "Kavadarci is a town in the Tikveš region of North Macedonia. In the heart of North Macedonia's wine country, it is home to the largest winery in Southeast Europe, named after the Tikveš plain. The town of Kavadarci is the seat of Kavadarci Municipality."^^xsd:string .
+
+ns:Kichevo a ns:City ;
+    rdfs:label "Kichevo"^^xsd:string ;
+    ns:Description "Kičevo is a city in the western part of North Macedonia, located in a valley in the south-eastern slopes of Mount Bistra, between the cities of Ohrid and Gostivar. The capital Skopje is 112 km away. The city of Kičevo is the seat of Kičevo Municipality."^^xsd:string .
+
+ns:Kostoski_Inn a ns:Accommodation ;
+    rdfs:label "Kostoski Inn"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/113659037.jpg?k=99a78763727689b1d4bd12e9808f9cf41326c906953349543344ebc596b97d4c&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Kočani a ns:City ;
+    rdfs:label "Kočani"^^xsd:string ;
+    ns:Description "Kočani is a town in the eastern part of North Macedonia, situated around 100 kilometres east from Skopje. It has a population of 28,330 and is the seat of the Kočani Municipality."^^xsd:string .
+
+ns:Kratovo a ns:City ;
+    rdfs:label "Kratovo"^^xsd:string ;
+    ns:Description "Kratovo is a small town in North Macedonia. It is the seat of Kratovo Municipality. It lies on the western slopes of Mount Osogovo at an altitude of 600 metres above sea level. Having a mild and pleasant climate, it is located in the crater of an extinct volcano. It is known for its bridges and towers."^^xsd:string .
+
+ns:Kriva_Palanka a ns:City ;
+    rdfs:label "Kriva Palanka"^^xsd:string ;
+    ns:Description "Kriva Palanka is a town located in the northeastern part of North Macedonia. It has 14,558 inhabitants. The town of Kriva Palanka is the seat of Kriva Palanka Municipality which has almost 21,000 inhabitants."^^xsd:string .
+
+ns:Krushevo a ns:City ;
+    rdfs:label "Krushevo"^^xsd:string ;
+    ns:Description "Kruševo is a town in North Macedonia. In Macedonian the name means the 'place of pear trees'. It is the highest town in North Macedonia and one of the highest in the Balkans, situated at an altitude of over 1350 m above sea level. The town of Kruševo is the seat of Kruševo Municipality."^^xsd:string .
+
+ns:Lav a ns:Accommodation ;
+    rdfs:label "Lav"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://ak-d.tripcdn.com/images/220q12000000t8vwq89BB_R_960_660_R5_D.jpg"^^xsd:string ;
+    ns:Rating "3.6"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Limak_Skopje_Luxury_Hotel a ns:Accommodation ;
+    rdfs:label "Limak Skopje Luxury Hotel"^^xsd:string ;
+    ns:Description "Upmarket hotel with dining & a spa"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/291907833.jpg?k=910c85b7646286c2d810302504c3b735020f372a9e310172131b2121ef3c142b&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Makedonski_Brod a ns:City ;
+    rdfs:label "Makedonski Brod"^^xsd:string ;
+    ns:Description "Makedonski Brod is a small town in the central part of North Macedonia, on the south-eastern part of Suva Gora, western Karadžica and south-western Dautica mountains. The town is the seat of Makedonski Brod Municipality."^^xsd:string .
+
+ns:Marriot a ns:Accommodation,
+        owl:NamedIndividual ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/08/ce/41/exterior.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:MiCasa_Skopje a ns:Accommodation ;
+    rdfs:label "MiCasa Skopje"^^xsd:string ;
+    ns:Description "A modern boutique hotel, located in the heart of Skopje, right next to the Skopje Fortress, only 300 meters from the Old Bazar"^^xsd:string ;
+    ns:Image "https://micasa.mk/wp-content/uploads/2021/03/1C08439E-0258-4E84-B5A9-4063092527F7.jpeg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Millenium_Palace a ns:Accommodation ;
+    rdfs:label "Millenium Palace"^^xsd:string ;
+    ns:Description "Food · Service"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/81594435.jpg?k=24abb58f6da1adbe2da8e6cc5299c69e4f8d3051c4e1bc03c5ff48b354c9ef0d&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Negotino a ns:City ;
+    rdfs:label "Negotino"^^xsd:string ;
+    ns:Description "Negotino is a town in North Macedonia, the seat of the Negotino Municipality. Its population is about 13,000."^^xsd:string .
+
+ns:Park_Hotel a ns:Accommodation ;
+    rdfs:label "Park Hotel"^^xsd:string ;
+    ns:Description "Chic hotel with river views & dining"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/106773623.jpg?k=f073e5fc6cc799e6e8897497419261f5b700a0e63a33df1053e37879154873de&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Podgorski_An a ns:Accommodation ;
+    rdfs:label "Podgorski An"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/116869720.jpg?k=b23d7174f9c5682c8b4759c47a2b60528ce8b83329b94110780f052ba8bfaf4b&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Private_Accomodation_Joleski a ns:Accommodation ;
+    rdfs:label "Private Accomodation Joleski"^^xsd:string ;
+    ns:Description "Service"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/106526716.jpg?k=49b5cc5a9b2062f1c1e72f77780920cfb3c6e6da3a018b073c26fcf5c790b315&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Probištip a ns:City ;
+    rdfs:label "Probištip"^^xsd:string ;
+    ns:Description "Probištip is a town in North Macedonia, and seat of Probištip Municipality. The town has a population of 10,826."^^xsd:string .
+
+ns:Radovish a ns:City ;
+    rdfs:label "Radovish"^^xsd:string ;
+    ns:Description "Radoviš is a city in the southeastern part of North Macedonia. It is the second largest city in the southeastern region. The city is the seat of Radoviš Municipality, which is spread on the bottom of Plačkovica Mountain and the northern part of the Radoviš-Strumica valley."^^xsd:string .
+
+ns:Rancho_i_Vancho_na_Kata a ns:Accommodation ;
+    rdfs:label "Rancho i Vancho na Kata"^^xsd:string ;
+    ns:Description "Free breakfast"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/240365556.jpg?k=cc0b854aa5a714d97df1ef084110ed3e0fc83bd19f78bd78ae2a17524448f236&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Rating a owl:DatatypeProperty ;
+    rdfs:domain ns:Accommodation,
+        ns:Attraction ;
+    rdfs:range xsd:float .
+
+ns:Resen a ns:City ;
+    rdfs:label "Resen"^^xsd:string ;
+    ns:Description "Resen is a town in southwestern North Macedonia, with just under 9,000 inhabitants. Resen is approximately equidistant between Bitola and Ohrid. The town rises 880 metres above sea level and is situated near Lake Prespa. Resen is also the only town in the Prespa Lake area and is the seat of Resen Municipality."^^xsd:string .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Resort_&_Spa_„Bushi“> a ns:Accommodation ;
+    rdfs:label "Resort & Spa „Bushi“"^^xsd:string ;
+    ns:Description "Sophisticated hotel with dining & a spa"^^xsd:string ;
+    ns:Image "https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/b3/a7/eb/caption.jpg"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Royal_View a ns:Accommodation,
+        owl:NamedIndividual ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1280x900/154746094.jpg?k=f5816034bf8ed0b72559434b1525e0bedfd1cf43a1ac1390326b61390a51d166&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Senigallia a ns:Accommodation,
+        owl:NamedIndividual ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Pirate_Ship%2C_Hotel_Senigallia%2C_Skopje_%2850385214457%29.jpg/1200px-Pirate_Ship%2C_Hotel_Senigallia%2C_Skopje_%2850385214457%29.jpg?20210516175257"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Ship_Panini a ns:Accommodation ;
+    rdfs:label "Ship Panini"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://www.visitrural.sharmountain.com/images/2020/02/10/42711566.jpg"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Shtip a ns:City ;
+    rdfs:label "Shtip"^^xsd:string ;
+    ns:Description """Štip is the largest urban agglomeration in the eastern part of North Macedonia, serving as the economic, industrial, entertainment and educational focal point for the surrounding municipalities.
+As of the 2021 census, the city of Štip had a population of about 44,866."""^^xsd:string .
+
+ns:St.george_Hotel a ns:Accommodation ;
+    rdfs:label "St.george Hotel"^^xsd:string ;
+    ns:Description "Parking"^^xsd:string ;
+    ns:Image "https://scontent.fskp2-1.fna.fbcdn.net/v/t39.30808-6/356809633_791296059663256_5696740905107007115_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=IeyqI1Rv3xMAX9MWCz6&_nc_ht=scontent.fskp2-1.fna&oh=00_AfBBTlR2dGoSLnWFMb51P31wr71-0WJMTFVkpv04d9LnBA&oe=64AF8E9C"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Stone_Bridge_Apartments a ns:Accommodation ;
+    rdfs:label "Stone Bridge Apartments"^^xsd:string ;
+    ns:Description "Free parking"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/308395455.jpg?k=9b79d907ee0a551aa95e65ce768c79b698bd7765d9670274b0d2f672dfef8e5b&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Story_Hotel_&_Spa> a ns:Accommodation ;
+    rdfs:label "Story Hotel & Spa"^^xsd:string ;
+    ns:Description "Hotel Story Skopje is a 4-star property approximately 25 minutes' stroll to The Stone Bridge."^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/320204233.jpg?k=50209a834b04b3e218682d35dfa405e3e11de14d9eedb7998e449898d2ba2c46&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Struga_Riverview_Hotel a ns:Accommodation ;
+    rdfs:label "Struga Riverview Hotel"^^xsd:string ;
+    ns:Description "Pool"^^xsd:string ;
+    ns:Image "https://art-caffe-struga-river-view-hotel.booked.net/data/Photos/Big/7861/786128/786128691/Art-Theatre-Caffe-Hotel-Struga-Exterior.JPEG"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Tetovo a ns:City ;
+    rdfs:label "Tetovo"^^xsd:string ;
+    ns:Description "Tetovo is a city in the northwestern part of North Macedonia, built on the foothills of Šar Mountain and divided by the Pena River. The municipality of Tetovo covers an area of 1,080 km² at 468 meters above sea level, with a population of 63,176. The city of Tetovo is the seat of Tetovo Municipality."^^xsd:string .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Unique_Resort_&_Spa> a ns:Accommodation ;
+    rdfs:label "Unique Resort & Spa"^^xsd:string ;
+    ns:Description "Wellness · Fitness · Spa"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/0f/ec/56/unique-resort-and-spa.jpg?w=700&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:View_Inn_Boutique_Hotel a ns:Accommodation ;
+    rdfs:label "View Inn Boutique Hotel"^^xsd:string ;
+    ns:Description "Unfussy hotel with a restaurant"^^xsd:string ;
+    ns:Image "https://media-cdn.tripadvisor.com/media/photo-s/0f/df/2c/19/view-inn-boutique-hotel.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Villa_Darko a ns:Accommodation,
+        owl:NamedIndividual ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/306536483.jpg?k=6753d7bff3c5b39d09d5f53cd50db41eae3c145641aedccc91b78582c7d0ca6e&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Villa_Dea a ns:Accommodation ;
+    rdfs:label "Villa Dea"^^xsd:string ;
+    ns:Description "Cleanliness · Location · Service"^^xsd:string ;
+    ns:Image "https://media-cdn.tripadvisor.com/media/photo-m/1280/17/c1/3b/d5/villa-dea.jpg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Villa_Dvor_Ohrid a ns:Accommodation ;
+    rdfs:label "Villa Dvor Ohrid"^^xsd:string ;
+    ns:Description "Property · Location · Service"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/256611810.jpg?k=a762c5ee3aed73aba14fcbb122e8a550b72b1429bdeeb6bf2e9408abd3b1c29c&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Villa_Flora a ns:Accommodation ;
+    rdfs:label "Villa Flora"^^xsd:string ;
+    ns:Description "Service · Property · Location"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/306773157.jpg?k=0290b3a99f02b446b42318bf04c5399ff80bed65e4e2852cdf657d7ff6edff44&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Villa_Grand_Bitola a ns:Accommodation ;
+    rdfs:label "Villa Grand Bitola"^^xsd:string ;
+    ns:Description "Full-service laundry"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/75730124.jpg?k=1bd5fee4aa7f0783e2c5bfbd9b2f06c82e151de9a5efe23f1e3f84abac9766d5&o=&hp=1"^^xsd:string ;
+    ns:Rating "3.8"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Villa_Ohrid_Anastasia a ns:Accommodation ;
+    rdfs:label "Villa Ohrid Anastasia"^^xsd:string ;
+    ns:Description "Cleanliness · Location · Property"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/162159322.jpg?k=44b9ff4a938f0bf775df39874338d1ecdb0da51be1bf4c2697e2124481844a42&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Villa_Varosh a ns:Accommodation ;
+    rdfs:label "Villa Varosh"^^xsd:string ;
+    ns:Description "Amenities · Kitchen · Property"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/255605068.jpg?k=196ef1082eae584919a1b236ef701755ba2df6ee3908384f24c8c27027a657b8&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Villa_Vesna_ a ns:Accommodation ;
+    rdfs:label "Villa Vesna "^^xsd:string ;
+    ns:Description "House"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max500/223808071.jpg?k=0c8a6f309b0ee23e5a237051313e5dcb4355243368d851c8cdf3a16d24bde7da&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Vinica a ns:City ;
+    rdfs:label "Vinica"^^xsd:string ;
+    ns:Description """Vinica is a town in North Macedonia, in the Eastern Statistical Region of the country. The town of Vinica is the seat of Vinica Municipality.
+The town is located under the mountain of Plačkovica, in the southeastern part of the Kočani Valley. It covers the northern part of the river Bregalnica sinks."""^^xsd:string .
+
+ns:hasAttraction a owl:ObjectProperty ;
+    rdfs:domain ns:City ;
+    rdfs:range ns:Attraction ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+ns:ibis_Skopje_City_Center a ns:Accommodation ;
+    rdfs:label "ibis Skopje City Center"^^xsd:string ;
+    ns:Description "Modern budget hotel with free breakfast"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/47622537.jpg?k=cf5b5a8e1047f1b463620423298a7baa78886b06dd72fb0c7901db8d1959be0b&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:locatedIn a owl:ObjectProperty ;
+    rdfs:domain ns:Accommodation ;
+    rdfs:range ns:City ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+ns:Хотел_Вила_парк a ns:Accommodation ;
+    rdfs:label "Хотел Вила парк"^^xsd:string ;
+    ns:Description "Free Wi-Fi"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/48195526.jpg?k=36e6b2fc5ee1fd40a1ffdc0d61fadf66193e4ff176ad4975e0e0a78f0487b882&o=&hp=1"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:ASNOM_memorial_complex a ns:Attraction ;
+    ns:Description """The ASNOM memorial center is a building located in the village of Pelince, in the northern part of Macedonia.
+It was built in 2004 and is a copy of the original building where the first plenary s ..."""^^xsd:string ;
+    ns:Image "https://as2.ftcdn.net/v2/jpg/02/70/21/95/1000_F_270219582_ahZ9AJ3SSj7YWYUfysPmXU0pdGpVNwkn.jpg"^^xsd:string ;
+    ns:Rating "4.1"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Ancient_Macedonian_City_Heraclea_Lyncestis a ns:Attraction ;
+    ns:Description "Archaeological site"^^xsd:string ;
+    ns:Image "https://www.bhfieldschool.org/uploaded/a0d12188e1a67b1667cbfcd2e5791e084e1f4561.jpg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Ancient_Macedonian_Theatre_of_Ohrid a ns:Attraction,
+        owl:NamedIndividual ;
+    ns:Description "The Ancient theatre of Ohrid of the Hellenistic period is located in Ohrid, North Macedonia. It was built in 200 BC and is the only Hellenistic-type theatre in the country as the other three in Scupi, Stobi and Heraklea Lynkestis are from Roman times"^^xsd:string ;
+    ns:Image "https://lh3.googleusercontent.com/p/AF1QipNWPKpGdEhfIwyRgy9ljcwgyx-mGz4s9kS4WoU=s1360-w1360-h1020"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Aquarius_Beach a ns:Attraction ;
+    ns:Description "Beach pavillion"^^xsd:string ;
+    ns:Image "https://media-cdn.tripadvisor.com/media/photo-s/0f/19/5c/4b/aquarius.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+<http://www.semanticweb.org/visitNorthMacedonia#B_&_F_Cruise_-_Ohrid> a ns:Attraction ;
+    ns:Description "Boat tour agency"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/75/f9/6f/st-naum-monastery.jpg?w=1200&h=900&s=1"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Banjsko_Roman_bath a ns:Attraction ;
+    ns:Description """The spa is located at the height of 270 m at the bottom of the mountain Belasica, 12 km southeast from Strumica.
+Orrographically it belongs to the north slope of mountain Belasica which has gener ..."""^^xsd:string ;
+    ns:Image "https://discoverstrumicacity.mk/assets/media/images/tours/tours_2/tour_2_3/img3.png"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Bitola_Zoo a ns:Attraction ;
+    ns:Description "Zoo"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/da/82/3e/zoo-bitola.jpg?w=1200&h=1200&s=1"^^xsd:string ;
+    ns:Rating "3.5"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Burial_mounds_of_undefeated a ns:Attraction ;
+    ns:Description "Mound of the Unbeaten is a World War II memorial in the Park of the Revolution, Prilep, North Macedonia. The monument and memorial complex were built in 1961 in honor to the martyrs and fallen fighters of the People's Liberation Struggle in Macedonia"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/0/07/%D0%9C%D0%BE%D0%B3%D0%B8%D0%BB%D0%B0_%D0%BD%D0%B0_%D0%BD%D0%B5%D0%BF%D0%BE%D0%B1%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%82%D0%B5.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Canyon_Matka a ns:Attraction,
+        owl:NamedIndividual ;
+    ns:Description "Matka is a canyon located west of central Skopje, North Macedonia. Covering roughly 5,000 hectares, Matka is one of the most popular outdoor destinations in North Macedonia and is home to several medieval monasteries. The Matka Lake within the Matka Canyon is the oldest artificial lake in the country"^^xsd:string ;
+    ns:Image "https://www.canyonmatka.mk/user/themes/canyonmatka/images/photo1.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Chinar_Tree a ns:Attraction ;
+    ns:Description "Tourist attraction"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/1100_Jahre_alte_Platane_in_Ohrid%2C_Makedonien.JPG/800px-1100_Jahre_alte_Platane_in_Ohrid%2C_Makedonien.JPG"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Church_of_Saint_John_the_Theologian a ns:Attraction ;
+    ns:Description "Orthodox church"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/e/e7/Iglesia_San_Juan_Kaneo%2C_Ohrid%2C_Macedonia_del_Norte%2C_2014-04-17%2C_DD_19.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Church_of_Saint_Sophia a ns:Attraction ;
+    ns:Description "Orthodox church"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/e/e3/St_Sophia_%28Ohrid%29.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Ciflik_Winery a ns:Accommodation,
+        ns:Attraction ;
+    rdfs:label "Ciflik Winery"^^xsd:string ;
+    ns:Description "Child-friendly"^^xsd:string,
+        "Winery"^^xsd:string ;
+    ns:Image "https://cf.bstatic.com/xdata/images/hotel/max1024x768/130939020.jpg?k=37417af1243eeab87a9d58f8e300c317569314531f9516dc797a96da7ffd6fa6&o=&hp=1"^^xsd:string,
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/130939020.jpg?k=37417af1243eeab87a9d58f8e300c317569314531f9516dc797a96da7ffd6fa6&o=&hp=1\\"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+<http://www.semanticweb.org/visitNorthMacedonia#City_​​Park> a ns:Attraction ;
+    ns:Description "Park and Garden"^^xsd:string ;
+    ns:Image "https://i1.wp.com/www.discoveringmacedonia.com/wp-content/uploads/2019/02/skopje-city-park-autumn.jpg?fit=1000%2C750&ssl=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Clock_Tower a ns:Attraction ;
+    ns:Description "Tourist attraction"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Clock_Tower_of_Bitola.jpg/275px-Clock_Tower_of_Bitola.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Dr._Nikola_Nezlobinski_Museum a ns:Attraction ;
+    ns:Description "Museum"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/2/21/Muzej_Dr_Nikola_Nezlobinski_--_Struga_1.JPG"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Eski_mosque a ns:Attraction ;
+    ns:Description "This mosque is the oldest object with public function in Kumanovo, built in 1751 by the Ottoman Turks."^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/a/ae/%D0%A2%D0%B0%D1%82%D0%B0%D1%80_%D0%A1%D0%B8%D0%BD%D0%B0%D0%BD_%D0%91%D0%B5%D0%B3_%D0%8F%D0%B0%D0%BC%D0%B8%D1%98%D0%B0_04.JPG"^^xsd:string ;
+    ns:Rating "3.8"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Gemidzii_monument a ns:Attraction ;
+    ns:Description "The imposing monument, 6,5 meters height, represents an involution of 12 sun rays which symbolize the twelve members of the revolutionary group Gemidzii who in the dawn of the revolt of Ilinden ma ..."^^xsd:string ;
+    ns:Image "https://macedonia-timeless.com/wp-content/uploads/2018/08/veles-spomenik-gemidzii.jpg"^^xsd:string ;
+    ns:Rating "3.9"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Haydar_Kadı_Mosque a ns:Attraction ;
+    ns:Description "Mosque"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/0/0b/Hajdar_Kadi_Mosque_%28Bitola%29.jpg"^^xsd:string ;
+    ns:Rating "4.1"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Holy_Church_of_Saint_Demetrius a ns:Attraction ;
+    ns:Description "Greek Orthodox church"^^xsd:string ;
+    ns:Image "https://i0.wp.com/cineculture.online/wp-content/uploads/2020/10/sv-dimitrija-bitola.jpg?fit=1400%2C800&ssl=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Holy_Mary_Peryvleptos a ns:Attraction ;
+    ns:Description "Orthodox church"^^xsd:string ;
+    ns:Image "https://live.staticflickr.com/4507/37783149706_f215ecc1cb_b.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Holy_Mother_of_God_Eleusa_church a ns:Attraction ;
+    ns:Description "Built on a rocky plateau, the monastery of the Holy Mother of God Eleusa is located in the village of Veljusa, about seven kilometers west of Strumica. The bishop Manuel of Strumica made this mona ..."^^xsd:string ;
+    ns:Image "https://s.inyourpocket.com/gallery/244606.jpg"^^xsd:string ;
+    ns:Rating "2.8"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Holy_Trinity_church a ns:Attraction ;
+    ns:Description """Holy Trinity (Sveta Troica) church was built in 1902.
+Holy Trinity (Sveta Troica) church is a product from the struggles in the 19th century by initiative of the Patriarshy."""^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Sv.Troica-Kumanovo.JPG/1200px-Sv.Troica-Kumanovo.JPG"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:House_of_the_Army a ns:Attraction ;
+    ns:Description "Cultural centre"^^xsd:string ;
+    ns:Image "https://cineculture.online/wp-content/uploads/2020/10/oficerski-dom-bitola.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Icons_Gallery a ns:Attraction ;
+    ns:Description "Art museum"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/12/ae/2f/icon-gallery-ohrid.jpg?w=1200&h=1200&s=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Karting_Center_Struga a ns:Attraction ;
+    ns:Description "Go-Cart Track"^^xsd:string ;
+    ns:Image "https://scontent.fskp2-1.fna.fbcdn.net/v/t1.6435-9/116346246_116323593500497_2915180776593354339_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=8wuLY_ZIDlcAX9TzVmH&_nc_ht=scontent.fskp2-1.fna&oh=00_AfCpLnL8vjtzdlOHrHsUV-1vmLu_yXNNYIveBCfYBR3Y6g&oe=64D150E4"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Kokino_megalithic_observatory a ns:Attraction ;
+    ns:Description "An important megalithic observatory site. It is believed that represents an astronomical observatory and a ceremonial place. The site is approximately 3,800 years old. Kokino consists of two parts ..."^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/c/c5/Megalithic_Observatory_Kokino.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Kolesino_waterfall a ns:Attraction ;
+    ns:Description """The waterfall gently falls over the stone cliffs nestled in the forest of the Belasica Mountain at a height of 19 metres (62 ft.) in multiple watery streams only to reform into the river below.
+K ..."""^^xsd:string ;
+    ns:Image "https://macedonia-timeless.com/wp-content/uploads/2018/09/kolesinski-vodopad.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Kosturnica_memorial a ns:Attraction ;
+    ns:Description "The Kosturnica represents a Memorial from the Second World War. It's a strange, cement, cracked-egg-shaped structure. It symbolizes a German helman of the Second World War, broken in four pieces. ..."^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Veles_Memorial_Ossuary_03.jpg/1200px-Veles_Memorial_Ossuary_03.jpg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Lake_Ohrid a ns:Attraction ;
+    ns:Description "Lake"^^xsd:string ;
+    ns:Image "https://2cupsoftravel.com/wp-content/uploads/2022/08/Lake-ohrid-nth-macedonia-recommendations.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Macedonian_Holocaust_Museum a ns:Attraction ;
+    ns:Description "History museum"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/b7/86/e7/holocaust-memorial-centre.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Macedonian_Square a ns:Attraction,
+        owl:NamedIndividual ;
+    ns:Description "Macedonia Square is the main square of Skopje, the capital of North Macedonia. The square is the biggest in North Macedonia with a total extent of 18,500 m². It is located in the central part of the city, and it crosses the Vardar River"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/c/c1/SK_20170809_092547_%2836321298271%29.jpg"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Matejce_monastery a ns:Attraction ;
+    ns:Description """The Ascension of Holy Mother is located near the village of Matejce. The Matejce monastery is built high on the Skopska Crna Gora mountain in the distant 1313.
+
+Matejce monastery is dedicated to ..."""^^xsd:string ;
+    ns:Image "https://www.panacomp.net/wp-content/uploads/2019/01/0_4951e_b8e8fc1c_XL.jpg"^^xsd:string ;
+    ns:Rating "3.6"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Memorial_House_„Mother_Theresa“> a ns:Attraction ;
+    ns:Description "Memorial"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/a7/d7/f0/img-20180415-094540-largejpg.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Millennium_Cross a ns:Attraction ;
+    ns:Description "Tourist attraction"^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/9/95/Aerial_View_of_The_Millennium_Cross.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Mladost_lake_-_Veles_lake a ns:Attraction ;
+    ns:Description """The artificial Mladost lake (Veles lake), situated 8 km north from the town in the surroundings of the Otovica village, represents one of the most visited destinations in the area.
+The Mladost la ..."""^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/80/5e/34/lake-mladost.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Monastery_of_Saint_Naum a ns:Attraction ;
+    ns:Description "Monastery"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/f7/f4/10/monastery-of-saint-naum.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Mustafa_Paša_Mosque a ns:Attraction ;
+    ns:Description "Mosque"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a4/3a/49/mustafa-pasha-mosque.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:NI_Institute_and_Museum_Bitola a ns:Attraction ;
+    ns:Description "Museum"^^xsd:string ;
+    ns:Image "https://muzejbitola.mk/wp-content/uploads/2010/09/muzej-nova.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:National_Park_Pelister a ns:Attraction ;
+    ns:Description "National park"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/5c/63/5e/caption.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:National_Workshop_For_Handmade_Paper_Ljupcho_Panevski a ns:Attraction ;
+    ns:Description "Art gallery"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/9c/4c/7a/handmade.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:Old_Bazaar a ns:Attraction ;
+    ns:Description "Market"^^xsd:string ;
+    ns:Image "https://i0.wp.com/passportsymphony.com/wp-content/uploads/2020/12/carsija-skopje.jpg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Plaoshnik a ns:Attraction,
+        owl:NamedIndividual ;
+    ns:Description "Plaošnik or simply Plaoš is an archaeological site and holy place in Ohrid, 250 meters below Samuil's Fortress. In the future, the whole complex will have konaks as in the time of Saint Clement of Ohrid, together with several surrounding objects"^^xsd:string ;
+    ns:Image "https://macedonia-timeless.com/wp-content/uploads/2018/09/plaosnik-arheoloski-naodi.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:River_Drim a ns:Attraction ;
+    ns:Description "River"^^xsd:string ;
+    ns:Image "https://macedonia-timeless.com/wp-content/uploads/2018/09/crn-drim-slivot.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Saint_Gjorgi_church a ns:Attraction ;
+    ns:Description "Saint George church in Staro Nagoricane is believed that was built in 1313, although it has been ascertained that it was erected on the fundaments of an older sacral structure dating from the 11th ..."^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/4/4d/Kurbinovo_1.jpg"^^xsd:string ;
+    ns:Rating "3.6"^^xsd:float ;
+    ns:locatedIn ns:Kumanovo .
+
+ns:Saint_Jovan_Vetersko_monastery a ns:Attraction ;
+    ns:Description """The monastery Saint Jovan the Baptist is situated on the E-75 / M-1 highway (Petrovec-Veles junction), in the vicinity of Vetersko village.
+Saint Jovan Vetersko is an interesting monastery church ..."""^^xsd:string ;
+    ns:Image "https://i0.wp.com/journeymacedonia.com/wp-content/uploads/2016/07/St-John-the-Baptist-Bigorski-Monastery.jpg?fit=2256%2C1500"^^xsd:string ;
+    ns:Rating "3.9"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Saint_Pantelejmon_church a ns:Attraction ;
+    ns:Description "Saint Pantelejmon church of Veles is lLocated high on a hill south of Veles, amidst the graves of a local cemetery, is the Church of St. Pantelejmon. The inside is very beautiful, and the caretake ..."^^xsd:string ;
+    ns:Image "https://religiana.com/sites/default/files/styles/hero_image/public/images/2020-11/3859.jpg?itok=-oazB8Zi"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Shirok_Sokak a ns:Attraction ;
+    ns:Description "Notable street"^^xsd:string ;
+    ns:Image "https://bitola.info/wp-content/uploads/2017/02/Shirok_sokak_Bitola.jpg"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Skopje_Fortress a ns:Attraction ;
+    ns:Description "Fortress"^^xsd:string ;
+    ns:Image "https://explore.mk/wp-content/uploads/2020/02/shutterstock_173849720.jpg"^^xsd:string ;
+    ns:Rating "4.2"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Smolare_waterfall a ns:Attraction ;
+    ns:Description "The waterfall is part of the Lomnica River and is located deep in the Belasica Mountain at an elevation of 630 metres. Crashing down the smooth, black rock face, and surrounded by 100-year-old bee ..."^^xsd:string ;
+    ns:Image "https://macedonia-timeless.com/wp-content/uploads/2018/09/smolarski-vodopad.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Solunska_Glava_peak a ns:Attraction ;
+    ns:Description "Not less attractive is one of the highest mountain picks in Republic of Macedonia - Solunska Glava (2,540 meters), as well as the mountain house Ceples, where pleasant accommodation can be found a ..."^^xsd:string ;
+    ns:Image "https://www.visitrural.mk/images/2020/02/22/5MP-1.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:St._Archangel_Michael a ns:Attraction ;
+    ns:Description "The Varosh monastery complex includes foundations of necropolis and settlements from the bronze and iron ages, thermal spas from the Roman period and numerous well preserved cultural-historical mo ..."^^xsd:string ;
+    ns:Image "https://www.prilepinfo.mk/images/sv-arhangel-mihail-varos.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:St._Panteleimon a ns:Attraction ;
+    ns:Description "Monastery"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/2e/ca/d3/caption.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Stobi a ns:Attraction ;
+    ns:Description "Stobi was first mentioned in the year of 197 BC by Livius. According to him, Stobi is located on the flow of river Crna into Vardar, where Philip 5th king of Macedonia, defeated the Dardanians. Ac ..."^^xsd:string ;
+    ns:Image "https://macedonia-timeless.com/wp-content/uploads/2018/09/stobi-1.jpg"^^xsd:string ;
+    ns:Rating "4.0"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Stone_Bridge a ns:Attraction ;
+    ns:Description "Bridge"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/ac/47/0b/macedonia-stone-bridge.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.6"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Strumica_museum a ns:Attraction ;
+    ns:Description """The Institute for the Protection of Cultural Heritage and Museum was established as a regional museum in 1952.
+On 01.01.2005 the institution became a regional conservation center responsible for ..."""^^xsd:string ;
+    ns:Image "https://tropter.com/uploads/uploads/images/13/7e/d6f20af95bec79605827a462070bc7851da6/fileinstitute_for_protection_of_cultural_monuments_and_museum_-_strumica_big.jpeg?t=20201018195014"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:The_Bay_of_Bones a ns:Attraction ;
+    ns:Description "Museum"^^xsd:string ;
+    ns:Image "https://i2.wp.com/www.discoveringmacedonia.com/wp-content/uploads/2018/07/Bay-of-Bones-MK-from-above.jpg?resize=1000%2C750&ssl=1"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Ohrid .
+
+ns:The_Congress_of_Bitola_House a ns:Attraction ;
+    ns:Description "History museum"^^xsd:string ;
+    ns:Image "https://www.slobodenpecat.mk/wp-content/uploads/2021/12/muzej-na-albanskata-azbuka-bitola.jpg"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Towers_of_Marko_fortress a ns:Attraction ;
+    ns:Description """A 30 min hike from Varosh village will take you to the ruins of the medieval fortress known as Markovi kuli.
+The hike is through a strange bare landscape with huge rocks in different shapes. On t ..."""^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/4/43/%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B8_-_%D0%BA%D1%83%D0%BB%D0%B8_-_%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF.JPG"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Treskavec_monastery a ns:Attraction ;
+    ns:Description "The Treskavec monastery is situated under the peak Zlatovrv (1262 m), about 10 kilometers from the town of Prilep, in a striking mountain landscape, from where you have a great view of the Pelagon ..."^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/3/35/Treskavec_Monastery_02.jpg"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Tzarevi_Kuli_Fortress a ns:Attraction ;
+    ns:Description "The fortress was built right near Strumica, and remains are visible today. Tzarevi Kuli is a fortress from the late ancient period. Tzarevi Kuli (Tzar Towers) fortress is located on the southern side of Strumica. It has 100 square meters and is oriented east-west. The Tzar's Towers are located on the hill overlooking Strumica. They are the remains of a medieval fortress from the 11th-12th century, that was extended during the 12th-14th century. There is not much left over from this once so powerful fortress. The only well visible remains are the so-called Pirg Tower, the main tower of the fortress where the commander of the fortress stayed. The lower floor was a water tanker filled with atmospheric water."^^xsd:string ;
+    ns:Image "https://dmwc.org.mk/wp-content/uploads/2021/04/DJI_0112a-1.png"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+ns:Tzarevi_Kuli_Fortress a ns:Attraction ;
+    ns:Description "The fortress was built right near Strumica, and remains are visible today. Tzarevi Kuli is a fortress from the late ancient period. Tzarevi Kuli (Tzar Towers) fortress is located on the southern side of Strumica. It has 100 square meters and is oriented east-west. The Tzar's Towers are located on the hill overlooking Strumica. They are the remains of a medieval fortress from the 11th-12th century, that was extended during the 12th-14th century. There is not much left over from this once so powerful fortress. The only well visible remains are the so-called Pirg Tower, the main tower of the fortress where the commander of the fortress stayed. The lower floor was a water tanker filled with atmospheric water."^^xsd:string ;
+    ns:Image "https://dmwc.org.mk/wp-content/uploads/2021/04/DJI_0112a-1.png"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+
+ns:Veles_Clock_tower a ns:Attraction ;
+    ns:Description """The Veles clock tower was built in the end of the 18th and the beginning of the 19th centuries.
+Once, the bell of the tower denoting the hours could be heard within a radius of 25km."""^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Veles_X16.jpg/1200px-Veles_X16.jpg"^^xsd:string ;
+    ns:Rating "4.7"^^xsd:float ;
+    ns:locatedIn ns:Veles .
+
+ns:Vodno a ns:Attraction ;
+    ns:Description "Mountain peak"^^xsd:string ;
+    ns:Image "https://i0.wp.com/www.discoveringmacedonia.com/wp-content/uploads/2014/06/visit-skopje-8.jpg?resize=1024%2C498&ssl=1"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Vodoca_Monastary a ns:Attraction ;
+    ns:Description "Vodoca is the name of the village located 5 kilometers from Strumica. The 5th monastery is dedicated to Saint Leontius. In the Vodoca monastery area are the new church and the ruins of the original church. There are some frescoes from the 11th century. Vodoca is magnificent medieval center of the metropolitans in Strumica. Monastery that holds the remnants of several ancient churches since the 7th century, on whose foundations is built the beautiful temple dedicated to the Saint Leontius in the 11th century, and to Eleusa. This is a site where more than 1.000 medieval tombs were discovered alongside with jewelry and ceramics from the 14th century - one of the richest archaeological sites in Macedonia."^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/b/b3/Orthodox_Church_%2C_54.JPG"^^xsd:string ;
+    ns:Rating "4.8"^^xsd:float ;
+    ns:locatedIn ns:Strumica .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Winery_„Kartal“> a ns:Attraction ;
+    ns:Description "Winery"^^xsd:string ;
+    ns:Image "https://cdn.getyourguide.com/img/tour/5e60b64473c2f.jpeg/146.jpg"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+ns:Woman_Warrior_Park a ns:Attraction ;
+    ns:Description "Memorial park"^^xsd:string ;
+    ns:Image "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/0a/02/e4/park-woman-warrior.jpg?w=1200&h=-1&s=1"^^xsd:string ;
+    ns:Rating "4.4"^^xsd:float ;
+    ns:locatedIn ns:Skopje .
+
+<http://www.semanticweb.org/visitNorthMacedonia#Women's_Beach> a ns:Attraction ;
+    ns:Description "Beach"^^xsd:string ;
+    ns:Image "https://images.myguide-cdn.com/macedonia/companies/womens-beach-struga/large/womens-beach-struga-188049.jpg"^^xsd:string ;
+    ns:Rating "4.3"^^xsd:float ;
+    ns:locatedIn ns:Struga .
+
+ns:Yeni_mosque a ns:Attraction ;
+    ns:Description "Historical landmark"^^xsd:string ;
+    ns:Image "https://media02.stockfood.com/largepreviews/MjE4MDQ2NTMyMQ==/70337591-europe-macedonia-bitola-yeni-mosque.jpg"^^xsd:string ;
+    ns:Rating "4.5"^^xsd:float ;
+    ns:locatedIn ns:Bitola .
+
+ns:Zrze_monastery a ns:Attraction ;
+    ns:Description """The monastery Zrze is located near the village Zrze, approx. 25km north-west of Prilep.
+The numerous remnants of the ancient period-pillars, basilica remains, and other exponents speak of the ric ..."""^^xsd:string ;
+    ns:Image "https://upload.wikimedia.org/wikipedia/commons/b/b6/Monastery_view_zrze.jpg"^^xsd:string ;
+    ns:Rating "4.9"^^xsd:float ;
+    ns:locatedIn ns:Prilep .
+
+ns:Prilep a ns:City ;
+    rdfs:label "Prilep"^^xsd:string ;
+    ns:Description "Prilep is the fourth-largest city in North Macedonia. According to 2021 census results, it has a population of 63,308 and is known as \"the city under Marko's Towers\" because of its proximity to the towers of Prince Marko."^^xsd:string ;
+    ns:hasAttraction ns:Burial_mounds_of_undefeated,
+        ns:St._Archangel_Michael,
+        ns:Towers_of_Marko_fortress,
+        ns:Treskavec_monastery,
+        ns:Zrze_monastery .
+
+ns:Struga ns:hasAttraction ns:Aquarius_Beach,
+        ns:Dr._Nikola_Nezlobinski_Museum,
+        ns:Karting_Center_Struga,
+        ns:River_Drim,
+        <http://www.semanticweb.org/visitNorthMacedonia#Women's_Beach> .
+
+ns:Veles a ns:City ;
+    rdfs:label "Veles"^^xsd:string ;
+    ns:Description "Veles is a city in the central part of North Macedonia on the Vardar river. The city of Veles is the seat of Veles Municipality. Veles is the sixth largest Macedonian city with a total population of 43,716."^^xsd:string ;
+    ns:hasAttraction ns:Gemidzii_monument,
+        ns:Kosturnica_memorial,
+        ns:Mladost_lake_-_Veles_lake,
+        ns:Saint_Jovan_Vetersko_monastery,
+        ns:Saint_Pantelejmon_church,
+        ns:Solunska_Glava_peak,
+        ns:Stobi,
+        ns:Veles_Clock_tower .
+
+ns:Kumanovo a ns:City ;
+    rdfs:label "Kumanovo"^^xsd:string ;
+    ns:Description "Kumanovo is a city in North Macedonia and the seat of Kumanovo Municipality, the largest municipality in the country."^^xsd:string ;
+    ns:hasAttraction ns:ASNOM_memorial_complex,
+        ns:Eski_mosque,
+        ns:Holy_Trinity_church,
+        ns:Kokino_megalithic_observatory,
+        ns:Matejce_monastery,
+        ns:Saint_Gjorgi_church .
+
+ns:Strumica a ns:City ;
+    rdfs:label "Strumica"^^xsd:string ;
+    ns:Description "Strumica is the largest city in southeastern North Macedonia, near the Novo Selo-Petrich border crossing with Bulgaria. About 55,000 people live in the region surrounding the city. It is named after the Strumica River which runs through it. The city of Strumica is the seat of Strumica Municipality."^^xsd:string ;
+    ns:hasAttraction ns:Banjsko_Roman_bath,
+        ns:Holy_Mother_of_God_Eleusa_church,
+        ns:Kolesino_waterfall,
+        ns:Smolare_waterfall,
+        ns:Strumica_museum,
+        ns:Tzarevi_Kuli_Fortress,
+        ns:Vodoca_Monastary .
+
+ns:Bitola a ns:City ;
+    rdfs:label "Bitola"^^xsd:string ;
+    ns:Description "Bitola is a city in the southwestern part of North Macedonia. It is located in the southern part of the Pelagonia valley, surrounded by the Baba, Nidže, and Kajmakčalan mountain ranges, 14 kilometres north of the Medžitlija-Níki border crossing with Greece."^^xsd:string ;
+    ns:hasAttraction ns:Ancient_Macedonian_City_Heraclea_Lyncestis,
+        ns:Bitola_Zoo,
+        ns:Ciflik_Winery,
+        ns:Clock_Tower,
+        ns:Haydar_Kadı_Mosque,
+        ns:Holy_Church_of_Saint_Demetrius,
+        ns:House_of_the_Army,
+        ns:NI_Institute_and_Museum_Bitola,
+        ns:National_Park_Pelister,
+        ns:Shirok_Sokak,
+        ns:The_Congress_of_Bitola_House,
+        ns:Yeni_mosque .
+
+ns:Ohrid a ns:City,
+        owl:NamedIndividual ;
+    ns:Description "Ohrid is a city in North Macedonia and is the seat of the Ohrid Municipality. It is the largest city on Lake Ohrid and the eighth-largest city in the country, with the municipality recording a population of over 42,000 inhabitants as of 2002. Ohrid is known for once having 365 churches, one for each day of the year, and has been referred to as a \"Jerusalem of the Balkans\""^^xsd:string ;
+    ns:hasAttraction ns:Ancient_Macedonian_Theatre_of_Ohrid,
+        <http://www.semanticweb.org/visitNorthMacedonia#B_&_F_Cruise_-_Ohrid>,
+        ns:Chinar_Tree,
+        ns:Church_of_Saint_John_the_Theologian,
+        ns:Church_of_Saint_Sophia,
+        ns:Holy_Mary_Peryvleptos,
+        ns:Icons_Gallery,
+        ns:Lake_Ohrid,
+        ns:Monastery_of_Saint_Naum,
+        ns:National_Workshop_For_Handmade_Paper_Ljupcho_Panevski,
+        ns:Plaoshnik,
+        ns:The_Bay_of_Bones .
+
+ns:City a owl:Class .
+
+ns:Skopje a ns:City,
+        owl:NamedIndividual ;
+    ns:Description "Skopje is the capital and largest city of North Macedonia. It is the country's political, cultural, economic, and academic centre. Skopje lies in the Skopje Basin. Scupi is attested for the first time in the second century CE as a city in Roman Dardania."^^xsd:string ;
+    ns:hasAttraction ns:Canyon_Matka,
+        <http://www.semanticweb.org/visitNorthMacedonia#City_​​Park>,
+        ns:Macedonian_Holocaust_Museum,
+        ns:Macedonian_Square,
+        <http://www.semanticweb.org/visitNorthMacedonia#Memorial_House_„Mother_Theresa“>,
+        ns:Millennium_Cross,
+        ns:Mustafa_Paša_Mosque,
+        ns:Old_Bazaar,
+        ns:Skopje_Fortress,
+        ns:St._Panteleimon,
+        ns:Stone_Bridge,
+        ns:Vodno,
+        <http://www.semanticweb.org/visitNorthMacedonia#Winery_„Kartal“>,
+        ns:Woman_Warrior_Park .
+
+ns:Attraction a owl:Class .
+
+ns:Accommodation a owl:Class .
+

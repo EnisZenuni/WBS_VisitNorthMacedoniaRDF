@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>City List</title>
+    <style>
+        .image-container {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>City List</h1>
+<ul>
+    <li th:each="city : ${cities}">
+        <h2 th:text="${city.name}"></h2>
+        <p th:text="${city.description}"></p>
+        <h3>Attractions:</h3>
+        <ul>
+            <li th:each="attraction : ${city.attractions}">
+                <h4 th:text="${attraction.name}"></h4>
+                <p th:text="${attraction.description}"></p>
+                <div class="image-container">
+                    <img th:src="${attraction.image}" th:alt="${attraction.name}" />
+                </div>
+                <p th:text="${attraction.rating}"></p>
+            </li>
+        </ul>
+        <h3>Accommodations:</h3>
+        <ul>
+            <li th:each="accommodation : ${city.accommodations}">
+                <h4 th:text="${accommodation.name}"></h4>
+                <p th:text="${accommodation.description}"></p>
+                <div class="image-container">
+                    <img th:src="${accommodation.image}" th:alt="${accommodation.name}" />
+                </div>
+                <p th:text="${accommodation.rating}"></p>
+            </li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
