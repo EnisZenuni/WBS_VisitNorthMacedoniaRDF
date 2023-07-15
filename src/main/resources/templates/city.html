@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>City Details</title>
+    <title>City</title>
     <style>
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .image {
-            max-width: 100%;
-            height: auto;
+        .card {
+            width: 500px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1 th:text="${city?.name}"></h1>
-    <p th:text="${city?.description}"></p>
+<div class="card">
+    <h1>City: <span th:text="${city.name}">City Name</span></h1>
+    <p>Description: <span th:text="${city.description}">City Description</span></p>
+</div>
+
+<div class="card">
     <h2>Accommodations</h2>
     <ul>
-        <li th:each="accommodation : ${city?.accommodations}">
-            <h3 th:text="${accommodation?.name}"></h3>
-            <p th:text="${accommodation?.description}"></p>
-            <img th:src="${accommodation?.image}" class="image" alt="Accommodation Image">
-            <p th:text="${accommodation?.rating}"></p>
+        <li th:each="accommodation : ${city.accommodations}">
+            <h3><span th:text="${accommodation.name}">Accommodation Name</span></h3>
+            <p>Description: <span th:text="${accommodation.description}">Accommodation Description</span></p>
+            <p>Rating: <span th:text="${accommodation.rating}">Accommodation Rating</span></p>
         </li>
     </ul>
+</div>
+
+<div class="card">
     <h2>Attractions</h2>
     <ul>
-        <li th:each="attraction : ${city?.attractions}">
-            <h3 th:text="${attraction?.name}"></h3>
-            <p th:text="${attraction?.description}"></p>
-            <img th:src="${attraction?.image}" class="image" alt="Attraction Image">
-            <p th:text="${attraction?.rating}"></p>
+        <li th:each="attraction : ${city.attractions}">
+            <h3><span th:text="${attraction.name}">Attraction Name</span></h3>
+            <p>Description: <span th:text="${attraction.description}">Attraction Description</span></p>
+            <p>Rating: <span th:text="${attraction.rating}">Attraction Rating</span></p>
         </li>
     </ul>
 </div>
