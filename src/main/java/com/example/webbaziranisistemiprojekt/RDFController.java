@@ -26,12 +26,12 @@ public class RDFController {
         return "city_detail";
     }
 
-//    @GetMapping("/city/{cityName}")
-//    public String getCityDetails(@PathVariable String cityName, Model model) {
-//        City city = ttlService.getCity(cityName);
-//        model.addAttribute("city", city);
-//        return "city";
-//    }
+    @GetMapping("/city/{cityName}")
+    public String getCityDetails(@PathVariable String cityName, Model model) {
+        City city = ttlService.getCity(cityName);
+        model.addAttribute("city", city);
+        return "city";
+    }
 
 }
 

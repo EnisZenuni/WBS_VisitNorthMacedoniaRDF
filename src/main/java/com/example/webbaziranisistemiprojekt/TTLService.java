@@ -27,16 +27,15 @@ import java.util.List;
 
 @Service
 public class TTLService {
+    private static final String NS_PREFIX = "http://www.semanticweb.org/visitNorthMacedonia#";
 
     public List<City> getCities() {
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/com/example/webbaziranisistemiprojekt/11updated_ontologyVeles.ttl", "TURTLE");
-
+        Model model = loadModelFromTTLFile();
         List<City> cities = new ArrayList<>();
 
-        StmtIterator cityIterator = model.listStatements(null, RDF.type, model.getResource("http://www.semanticweb.org/visitNorthMacedonia#City"));
+        ResIterator cityIterator = model.listSubjectsWithProperty(RDF.type, model.getResource(NS_PREFIX + "City"));
         while (cityIterator.hasNext()) {
-            Resource cityResource = cityIterator.nextStatement().getSubject();
+            Resource cityResource = cityIterator.nextResource();
             City city = createCityFromResource(cityResource, model);
             cities.add(city);
         }
@@ -44,43 +43,101 @@ public class TTLService {
         return cities;
     }
 
+    public City getCity(String cityName) {
+        Model model = loadModelFromTTLFile();
+
+        Resource cityResource = model.listSubjectsWithProperty(RDF.type, model.getResource(NS_PREFIX + "City"))
+                .filterKeep(resource -> {
+                    Statement labelStatement = resource.getProperty(RDFS.label);
+                    return labelStatement != null && labelStatement.getString().equalsIgnoreCase(cityName);
+                })
+                .next();
+
+        if (cityResource == null) {
+            return null; // City not found in the TTL data
+        }
+
+        return createCityFromResource(cityResource, model);
+    }
+
+
+
+
+
+
+
+
+
+//    public City getCity(String cityName) {
+//        Model model = loadModelFromTTLFile();
+//        Resource cityResource = model.getResource(NS_PREFIX + cityName);
+//        if (cityResource == null) {
+//            return null; // City not found in the TTL data
+//        }
+//        System.out.println("getCity +++++ City resource: " + cityResource);
+//
+//        return createCityFromResource(cityResource, model);
+//    }
+
     private City createCityFromResource(Resource cityResource, Model model) {
         City city = new City();
 
         Property labelProperty = RDFS.label;
-        Property descriptionProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Description");
+        Property descriptionProperty = model.createProperty(NS_PREFIX + "Description");
+        Property attractionsProperty = model.createProperty(NS_PREFIX + "hasAttraction");
 
         city.setName(getPropertyValue(cityResource, labelProperty, model));
         city.setDescription(getPropertyValue(cityResource, descriptionProperty, model));
-        city.setAccommodations(getAccommodationsForCity(cityResource, model));
-        city.setAttractions(getAttractionsForCity(cityResource, model));
+        city.setAccommodations(getAccommodationsForCity(cityResource, model)); // Updated line
+        city.setAttractions(getAttractionsForCity(cityResource, attractionsProperty, model));
 
+        //System.out.println("Create City From Resource City name: " + city.getName());
+        //System.out.println("Create City From Resource  City description: " + city.getDescription());
         return city;
     }
+
+
 
 
     private List<Accommodation> getAccommodationsForCity(Resource cityResource, Model model) {
         List<Accommodation> accommodations = new ArrayList<>();
 
-        StmtIterator accommodationIterator = model.listStatements(null, RDF.type, model.getResource("http://www.semanticweb.org/visitNorthMacedonia#Accommodation"));
-        while (accommodationIterator.hasNext()) {
-            Resource accommodationResource = accommodationIterator.nextStatement().getSubject();
-            if (accommodationResource.hasProperty(model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#locatedIn"), cityResource)) {
-                Accommodation accommodation = createAccommodationFromResource(accommodationResource, model);
-                accommodations.add(accommodation);
-            }
+        StmtIterator stmtIterator = model.listStatements(null, model.getProperty(NS_PREFIX + "locatedIn"), cityResource);
+        while (stmtIterator.hasNext()) {
+            Resource accommodationResource = stmtIterator.nextStatement().getSubject();
+            Accommodation accommodation = createAccommodationFromResource(accommodationResource, model);
+            accommodations.add(accommodation);
+            System.out.println("getAccommodationsForCity: " + accommodation.getName());
         }
 
         return accommodations;
     }
 
+
+    private List<Attraction> getAttractionsForCity(Resource cityResource, Property attractionsProperty, Model model) {
+        List<Attraction> attractions = new ArrayList<>();
+
+        StmtIterator stmtIterator = model.listStatements(cityResource, attractionsProperty, (RDFNode) null);
+        while (stmtIterator.hasNext()) {
+            Resource attractionResource = stmtIterator.nextStatement().getObject().asResource();
+            Attraction attraction = createAttractionFromResource(attractionResource, model);
+            attractions.add(attraction);
+            //TODO the name and other attribute probably do not exist
+            //System.out.println("Attraction desc: " + attraction.getDescription());
+            System.out.println("Attraction name: " + attraction.getName());
+        }
+
+        return attractions;
+    }
+
+
     private Accommodation createAccommodationFromResource(Resource accommodationResource, Model model) {
         Accommodation accommodation = new Accommodation();
 
         Property labelProperty = RDFS.label;
-        Property descriptionProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Description");
-        Property imageProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Image");
-        Property ratingProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Rating");
+        Property descriptionProperty = model.createProperty(NS_PREFIX + "Description");
+        Property imageProperty = model.createProperty(NS_PREFIX + "Image");
+        Property ratingProperty = model.createProperty(NS_PREFIX + "Rating");
 
         accommodation.setName(getPropertyValue(accommodationResource, labelProperty, model));
         accommodation.setDescription(getPropertyValue(accommodationResource, descriptionProperty, model));
@@ -91,27 +148,18 @@ public class TTLService {
     }
 
 
-    private List<Attraction> getAttractionsForCity(Resource cityResource, Model model) {
-        List<Attraction> attractions = new ArrayList<>();
-
-        StmtIterator attractionIterator = model.listStatements(null, RDF.type, model.getResource("http://www.semanticweb.org/visitNorthMacedonia#Attraction"));
-        while (attractionIterator.hasNext()) {
-            Resource attractionResource = attractionIterator.nextStatement().getSubject();
-            if (attractionResource.hasProperty(model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#locatedIn"), cityResource)) {
-                Attraction attraction = createAttractionFromResource(attractionResource, model);
-                attractions.add(attraction);
-            }
-        }
-
-        return attractions;
-    }
 
     private Attraction createAttractionFromResource(Resource attractionResource, Model model) {
         Attraction attraction = new Attraction();
 
-        Property descriptionProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Description");
-        Property imageProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Image");
-        Property ratingProperty = model.createProperty("http://www.semanticweb.org/visitNorthMacedonia#Rating");
+        Property descriptionProperty = model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#Description");
+        Property imageProperty = model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#Image");
+        Property ratingProperty = model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#Rating");
+
+        // Retrieve the name from the resource URI
+        String uri = attractionResource.getURI();
+        String name = uri.substring(uri.lastIndexOf("/") + 1).replace("visitNorthMacedonia#", "");
+        attraction.setName(name);
 
         attraction.setDescription(getPropertyValue(attractionResource, descriptionProperty, model));
         attraction.setImage(getPropertyValue(attractionResource, imageProperty, model));
@@ -121,11 +169,19 @@ public class TTLService {
     }
 
 
+
+
     private String getPropertyValue(Resource resource, Property property, Model model) {
         Statement statement = resource.getProperty(property);
         if (statement != null && statement.getObject().isLiteral()) {
             return statement.getLiteral().getString();
         }
         return null;
+    }
+
+    private Model loadModelFromTTLFile() {
+        Model model = ModelFactory.createDefaultModel();
+        model.read("src/main/java/com/example/webbaziranisistemiprojekt/11updated_ontologyVeles.ttl", "TURTLE");
+        return model;
     }
 }
