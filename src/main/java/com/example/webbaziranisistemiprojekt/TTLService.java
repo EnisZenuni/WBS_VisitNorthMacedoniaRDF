@@ -46,19 +46,39 @@ public class TTLService {
     public City getCity(String cityName) {
         Model model = loadModelFromTTLFile();
 
-        Resource cityResource = model.listSubjectsWithProperty(RDF.type, model.getResource(NS_PREFIX + "City"))
-                .filterKeep(resource -> {
-                    Statement labelStatement = resource.getProperty(RDFS.label);
-                    return labelStatement != null && labelStatement.getString().equalsIgnoreCase(cityName);
-                })
-                .next();
-
-        if (cityResource == null) {
-            return null; // City not found in the TTL data
+        ResIterator cityIterator = model.listSubjectsWithProperty(RDF.type, model.getResource(NS_PREFIX + "City"));
+        while (cityIterator.hasNext()) {
+            Resource cityResource = cityIterator.nextResource();
+            String name = getPropertyValue(cityResource, RDFS.label, model);
+            if (name != null && name.equalsIgnoreCase(cityName)) {
+                System.out.println("City Resource URI: " + cityResource.getURI());
+                System.out.println("City Resource Label: " + name);
+                return createCityFromResource(cityResource, model);
+            }
         }
 
-        return createCityFromResource(cityResource, model);
+        return null; // City not found in the TTL data
     }
+
+
+    //TODO WORKS WHEN U HARDCODE the city
+//    public City getCity(String cityName) {
+//        Model model = loadModelFromTTLFile();
+//
+//        ResIterator cityIterator = model.listSubjectsWithProperty(RDF.type, model.getResource(NS_PREFIX + "City"));
+//        while (cityIterator.hasNext()) {
+//            Resource cityResource = cityIterator.nextResource();
+//            String name = getPropertyValue(cityResource, RDFS.label, model);
+//            if (name != null && name.equalsIgnoreCase("Veles")) {
+//                System.out.println("City Resource URI: " + cityResource.getURI());
+//                System.out.println("City Resource Label: " + name);
+//                return createCityFromResource(cityResource, model);
+//            }
+//        }
+//
+//        return null; // City not found in the TTL data
+//    }
+
 
 
 
@@ -152,21 +172,30 @@ public class TTLService {
     private Attraction createAttractionFromResource(Resource attractionResource, Model model) {
         Attraction attraction = new Attraction();
 
-        Property descriptionProperty = model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#Description");
-        Property imageProperty = model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#Image");
-        Property ratingProperty = model.getProperty("http://www.semanticweb.org/visitNorthMacedonia#Rating");
+        Property labelProperty = RDFS.label;
+        Property descriptionProperty = model.createProperty(NS_PREFIX + "Description");
+        Property imageProperty = model.createProperty(NS_PREFIX + "Image");
+        Property ratingProperty = model.createProperty(NS_PREFIX + "Rating");
 
-        // Retrieve the name from the resource URI
-        String uri = attractionResource.getURI();
-        String name = uri.substring(uri.lastIndexOf("/") + 1).replace("visitNorthMacedonia#", "");
-        attraction.setName(name);
-
+        attraction.setName(getPropertyValue(attractionResource, labelProperty, model));
         attraction.setDescription(getPropertyValue(attractionResource, descriptionProperty, model));
         attraction.setImage(getPropertyValue(attractionResource, imageProperty, model));
-        attraction.setRating(Float.parseFloat(getPropertyValue(attractionResource, ratingProperty, model)));
+
+        String ratingValue = getPropertyValue(attractionResource, ratingProperty, model);
+        if (ratingValue != null) {
+            try {
+                attraction.setRating(Float.parseFloat(ratingValue));
+            } catch (NumberFormatException e) {
+                // Handle parsing error if needed
+                attraction.setRating(0.0f); // Default rating value
+            }
+        } else {
+            attraction.setRating(0.0f); // Default rating value if "ratingValue" is null
+        }
 
         return attraction;
     }
+
 
 
 

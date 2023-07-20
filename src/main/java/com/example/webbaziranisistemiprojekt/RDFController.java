@@ -27,11 +27,16 @@ public class RDFController {
     }
 
     @GetMapping("/city/{cityName}")
-    public String getCityDetails(@PathVariable String cityName, Model model) {
+    public String getCity(Model model, @PathVariable("cityName") String cityName) {
         City city = ttlService.getCity(cityName);
+        if (city == null) {
+            // Handle city not found error
+            return "error"; // Or any other error page
+        }
         model.addAttribute("city", city);
         return "city";
     }
+
 
 }
 

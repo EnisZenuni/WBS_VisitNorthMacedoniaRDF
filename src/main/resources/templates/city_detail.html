@@ -18,28 +18,28 @@
 <h1>City List</h1>
 <ul>
     <li th:each="city : ${cities}">
-        <h2 th:text="${city.name}"></h2>
-        <p th:text="${city.description}"></p>
+        <h2 th:if="${city != null}" th:text="${city.name}">City Name</h2>
+        <p th:if="${city != null}" th:text="${city.description}"></p>
         <h3>Attractions:</h3>
         <ul>
             <li th:each="attraction : ${city.attractions}">
-                <h4 th:text="${attraction.name}"></h4>
-                <p th:text="${attraction.description}"></p>
+                <h4 th:if="${attraction != null}" th:text="${attraction.name}">Attraction Name</h4>
+                <p th:if="${attraction != null}" th:text="${attraction.description}"></p>
                 <div class="image-container">
-                    <img th:src="${attraction.image}" th:alt="${attraction.name}" />
+                    <img th:if="${attraction != null}" th:src="${attraction.image}" th:alt="${attraction.name}" />
                 </div>
-                <p th:text="${attraction.rating}"></p>
+                <p th:if="${attraction != null}" th:text="${attraction.rating}"></p>
             </li>
         </ul>
         <h3>Accommodations:</h3>
         <ul>
             <li th:each="accommodation : ${city.accommodations}">
-                <h4 th:text="${accommodation.name}"></h4>
-                <p th:text="${accommodation.description}"></p>
+                <h4 th:if="${accommodation != null}" th:text="${accommodation.name}">Accommodation Name</h4>
+                <p th:if="${accommodation != null}" th:text="${accommodation.description}"></p>
                 <div class="image-container">
-                    <img th:src="${accommodation.image}" th:alt="${accommodation.name}" />
+                    <img th:if="${accommodation != null}" th:src="${accommodation.image}" th:alt="${accommodation.name}" />
                 </div>
-                <p th:text="${accommodation.rating}"></p>
+                <p th:if="${accommodation != null}" th:text="${accommodation.rating}"></p>
             </li>
         </ul>
     </li>
