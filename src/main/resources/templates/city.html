@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>City</title>
+    <title>City Details</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <style>
-        .card {
-            width: 500px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
+        .carousel-item {
+            transition: opacity 1s;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+        .carousel-item-next,
+        .carousel-item-prev {
+            opacity: 0.5;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            filter: invert(100%);
         }
     </style>
 </head>
 <body>
-<div class="card">
-    <h1>City: <span th:text="${city.getName()}">City Name</span></h1>
-    <p>Description: <span th:text="${city.getDescription()}">City Description</span></p>
+
+<header class="bg-primary text-white p-3">
+    <div class="container">
+        <h1>Visit North Macedonia</h1>
+        <p>Explore the Beauty and Culture of the Balkans</p>
+    </div>
+</header>
+<div class="container mt-5">
+    <h1 class="mb-3" th:text="${city.name}"></h1>
+    <p th:text="${city.description}"></p>
+
+    <h2 class="mt-5">Attractions</h2>
+    <div id="attractionCarousel" class="carousel slide mb-5" data-ride="carousel">
+        <div class="carousel-inner">
+            <div th:each="attraction, stat : ${city.attractions}"
+                 class="carousel-item"
+                 th:classappend="${stat.index == 0} ? 'active' : ''">
+                <h3 th:text="${attraction.name}"></h3>
+                <p th:text="${attraction.description}"></p>
+                <p>Rating: <span th:text="${attraction.rating}"></span></p>
+                <div class="image-container">
+                    <img th:src="${attraction.image}"
+                         th:alt="${attraction.name}"
+                         class="d-block w-100">
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#attractionCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#attractionCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <h2 class="mt-5">Accommodations</h2>
+    <div id="accommodationCarousel" class="carousel slide mb-5" data-ride="carousel">
+        <div class="carousel-inner">
+            <div th:each="accommodation, stat : ${city.accommodations}"
+                 class="carousel-item"
+                 th:classappend="${stat.index == 0} ? 'active' : ''">
+                <h3 th:text="${accommodation.name}"></h3>
+                <p th:text="${accommodation.description}"></p>
+                <p>Rating: <span th:text="${accommodation.rating}"></span></p>
+                <div class="image-container">
+                    <img th:src="${accommodation.image}"
+                         th:alt="${accommodation.name}"
+                         class="d-block w-100">
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#accommodationCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#accommodationCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </div>
 
-<div class="card">
-    <h2>Accommodations</h2>
-    <ul>
-        <li th:each="accommodation : ${city.getAccommodations()}">
-            <h3><span th:text="${accommodation.getName()}">Accommodation Name</span></h3>
-            <p>Description: <span th:text="${accommodation.getDescription()}">Accommodation Description</span></p>
-            <p>Rating: <span th:text="${accommodation.getRating()}">Accommodation Rating</span></p>
-        </li>
-    </ul>
-</div>
+<footer class="bg-dark text-white p-3">
+    <div class="container">
+        <p>&copy; 2023 Visit North Macedonia. All rights reserved.</p>
+        <p>Contact: info@visitnorthmacedonia.com</p>
+    </div>
+</footer>
 
-<div class="card">
-    <h2>Attractions</h2>
-    <ul>
-        <li th:each="attraction : ${city.getAttractions()}">
-            <h3><span th:text="${attraction.getName()}">Attraction Name</span></h3>
-            <p>Description: <span th:text="${attraction.getDescription()}">Attraction Description</span></p>
-            <p>Rating: <span th:text="${attraction.getRating()}">Attraction Rating</span></p>
-        </li>
-    </ul>
-</div>
+
+<!-- Add Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

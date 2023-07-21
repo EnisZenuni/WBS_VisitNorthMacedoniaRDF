@@ -177,7 +177,10 @@ public class TTLService {
         Property imageProperty = model.createProperty(NS_PREFIX + "Image");
         Property ratingProperty = model.createProperty(NS_PREFIX + "Rating");
 
-        attraction.setName(getPropertyValue(attractionResource, labelProperty, model));
+
+        String attractionUri = attractionResource.getURI();
+        String attractionName = attractionUri.substring(attractionUri.lastIndexOf("#") + 1);
+        attraction.setName(attractionName);
         attraction.setDescription(getPropertyValue(attractionResource, descriptionProperty, model));
         attraction.setImage(getPropertyValue(attractionResource, imageProperty, model));
 

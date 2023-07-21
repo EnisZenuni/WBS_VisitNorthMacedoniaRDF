@@ -21,6 +21,12 @@ public class RDFController {
     private TTLService ttlService;
 
     @GetMapping("/")
+    public String homePageView(Model model) {
+        return "landingPage";
+    }
+
+
+    @GetMapping("/cities")
     public String showCities(Model model) {
         model.addAttribute("cities", ttlService.getCities());
         return "city_detail";
